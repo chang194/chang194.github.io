@@ -1,0 +1,8 @@
+.target{
+    margin:auto;
+    width: 50%;
+    border: 5px solid #DCB5FF;
+    padding: 20px;
+    font-size: 48px;
+    color: red;
+}
