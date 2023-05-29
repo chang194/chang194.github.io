@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Change>
+    <Type>
+        <Rate>30.96</Rate>
+        <Money>美金</Money>
+    </Type>
+    <Type>
+        <Rate>33.46</Rate>
+        <Money>歐元</Money>
+    </Type>
+    <Type>
+        <Rate>0.2219</Rate>
+        <Money>日圓</Money>
+    </Type>
+    <Type>
+        <Rate>0.02535</Rate>
+        <Money>韓元</Money>
+    </Type>
+    <Type>
+        <Rate>20.45</Rate>
+        <Money>澳幣</Money>
+    </Type>
+</Change>
