@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>匯率轉換計算機</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="mystyle.css">
+    </head>
+    <body>
+        <div>
+            <label>請輸入金額(新台幣):</label>
+            <input id="TWD" type="text" placeholder="ex.30" value="">
+            <br>
+            <br>
+            <button type="button" onclick="loadDoc()">轉換</button>
+            <input id="reset" type="button" value="重新開始">
+            <hr>
+            轉換結果:
+            <table id="change"></table>
+        </div>
+        <script>
+            //var change=document.querySelector('.change');
+
+            function loadDoc(){
+                const xhttp=new XMLHttpRequest();
+
+                xhttp.onload=function(){
+                    myfunction(this);
+                }
+
+                xhttp.open("GET","./rate.xml")
+                xhttp.send();
+            }
+
+            function myfunction(xml){
+                const xmlDoc=xml.responseXML;
+                const x=xmlDoc.getElementsByTagName("Type");
+
+                let table="<tr><th>金額</th><th>幣別單位</th></tr>";
+                var twd=parseFloat(document.getElementById('TWD').value);
+
+                for (let i=0;i<x.length;i++){
+                    table+="<tr><td>"+x[i].getElementsByTagName("Rate")[0].childNodes[0].nodeValue*twd+"<td></td>"+
+                        x[i].getElementsByTagName("Money")[0].childNodes[0].nodeValue+"</td></tr>";
+                }
+
+                document.getElementById("change").innerHTML=table;
+            }
+
+            /*document.getElementById('btn').onclick=function(){
+                let table="<tr><th>金額</th><th>幣別單位</th></tr>";
+                var dollar=parseFloat(document.getElementById('TWD').value)
+                var
+                change.innerHTML=table;
+            }*/
+        </script>
+    </body>
+</html>
