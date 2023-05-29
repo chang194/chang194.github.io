@@ -1,0 +1,20 @@
+table, th, td{
+    border:2px solid black;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 10px;
+}
+tr:nth-child(even){
+    background-color: azure;
+}
+input[type=button]{
+    width:80px;
+    margin-left:200px;
+    display:block;
+    background-color: black;
+    color: yellow;
+}
+body{
+    background-image: url("C:\Users\yolan\OneDrive\圖片\烏龜.png");
+}
